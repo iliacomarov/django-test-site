@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>landing page</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <!-- <link rel="stylesheet" href="{%  static 'style.css' %}"> -->
+</head>
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="title">The Store will soon open</h1>
+                <h1 class="title">Please register and leave your email in the form below</h1>
+                <div>
+                    <form action="" method="post">{% csrf_token %}
+                         {{ form.as_p }}
+                        <div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ <p>Today is {{ current_day }}</p>
+</body>
+</html>
