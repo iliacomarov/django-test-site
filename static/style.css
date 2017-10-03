@@ -1,9 +1,22 @@
+html, body{
+    height: 100%;
+    max-height: 100%;
+}
+
+.top-container{
+    padding-top: 10%;
+}
+
+.general-container{
+    background: url('img/bg_image.jpg');
+    height: 100%;
+    color: white;
+    font-weight: 100;
+}
+
 .title {
-    color: crimson;
+    color: white;
     text-align: center;
 }
 
-body {
-    color: crimson;
-    text-align: center;
-}
+
