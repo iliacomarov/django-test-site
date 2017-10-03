@@ -5,6 +5,7 @@ from django.db import models
 
 class Product(models.Model):
     product_name = models.CharField(max_length=64, blank=True, null=True, default=None)
+    product_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     description = models.TextField(max_length=256, blank=True, null=True, default=None)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
