@@ -4,6 +4,10 @@
 from django.contrib import admin
 from .models import *
 
+class ProductInOrderInLine(admin.TabularInline):
+    model = ProductInOrder
+    extra = 0
+
 class StatusAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Status._meta.fields]
 
@@ -14,6 +18,7 @@ admin.site.register(Status, StatusAdmin)
 
 class OrderAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Order._meta.fields]
+    inlines = [ProductInOrderInLine]
 
     class Meta:
         model = Order

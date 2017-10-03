@@ -6,6 +6,7 @@ from .models import *
 
 class ProductImageInLine(admin.TabularInline):
     model = ProductImage
+    extra = 0
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Product._meta.fields]
