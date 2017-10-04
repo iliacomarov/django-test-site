@@ -41,4 +41,10 @@ html, body{
     line-height: 50px;
 }
 
+.product-item{
+    height: 200px;
+    background-color: gray;
+    position: relative;
+}
+
 

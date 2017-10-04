@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+        {% block content %}
+            <div class="section-top">
+                <img src="{% static 'img/slider0.jpg' %}" class="img-responsive">
+            </div>
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+
+                        {% for product in products %}
+                            <div class="col-lg-3">
+                                <div class="product-item">
+                                    {{ product }}
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        {% endblock content %}
