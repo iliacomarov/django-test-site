@@ -12,7 +12,18 @@
                         {% for product in products %}
                             <div class="col-lg-3">
                                 <div class="product-item">
-                                    {{ product }}
+                                    <div>
+                                        <img src="/" class="img-responsive">
+                                    </div>
+                                    <h4>{{ product }}</h4>
+                                    <p>
+                                        {{ product.description|truncatechars_html:60 }}
+                                    </p>
+                                    <div class="add-to-cart-btn">
+                                        <button class="btn btn-success">
+                                            Add to cart
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         {% endfor %}
