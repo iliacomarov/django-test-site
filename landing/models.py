@@ -3,7 +3,7 @@
 
 from django.db import models
 
-class Subscriber (models.Model):
+class Subscriber(models.Model):
     subscriber_name = models.CharField(max_length=128)
     subscriber_email = models.EmailField()
 

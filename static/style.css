@@ -10,7 +10,7 @@ html, body{
 }
 
 .product-item{
-    height: 200px;
+    height: 215px;
     background-color: white;
     border: 1px solid lightgray;
     position: relative;
@@ -18,4 +18,8 @@ html, body{
     text-align: center;
 }
 
-
+.add-to-cart-btn{
+    position: absolute;
+    bottom: 15px;
+    left: 85px
+}
