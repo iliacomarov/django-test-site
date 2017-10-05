@@ -4,7 +4,7 @@
 from django.shortcuts import render
 import datetime
 from .forms import SubscriberForm
-from products.models import Product
+from products.models import Product, ProductImage
 
 def landing(request):
     form = SubscriberForm(request.POST or None)
@@ -14,5 +14,5 @@ def landing(request):
     return render(request, 'landing/landing.html', locals())
 
 def home(request):
-    products = Product.objects.filter(is_active=True)
+    products_images = ProductImage.objects.filter(is_active=True, is_main=True)
     return render(request, 'landing/home.html', locals())

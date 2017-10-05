@@ -9,18 +9,18 @@
                 <div class="container">
                     <div class="row">
 
-                        {% for product in products %}
+                        {% for product_image in products_images %}
                             <div class="col-lg-3">
                                 <div class="product-item">
                                     <div>
-                                        <img src="/" class="img-responsive">
+                                        <img src="{{ product_image.image.url }}" class="img-responsive">
                                     </div>
-                                    <h4>{{ product }}</h4>
+                                    <h4>{{ product_image.product.product_name }}</h4>
                                     <p>
-                                        {{ product.description|truncatechars_html:60 }}
+                                        {{ product_image.product.description|truncatechars_html:60 }}
                                     </p>
                                     <div>
-                                        {{ product.product_price }} USD
+                                        {{ product_image.product.product_price }} USD
                                     </div>
                                     <div class="add-to-cart-btn">
                                         <button class="btn btn-success">
