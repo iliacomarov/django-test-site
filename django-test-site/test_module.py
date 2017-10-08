@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+'''test_module.py - example of usage *args and **kvargs in functions'''
+
 all_sales = (12.78, 14, 55.98)
 all_sales2 = {'sale1': 4509.78, 'sale2': 123.67}
 
