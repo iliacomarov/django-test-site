@@ -26,6 +26,15 @@ html, body{
     text-align: center;
 }
 
+.product-description-tabs{
+    padding: 10px;
+}
+
+.product-image-item {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
 .wrapper{
     min-height: 100%;
 }
@@ -71,4 +80,6 @@ html, body{
     bottom: 15px;
     left: 85px;
 }
+
+
 
