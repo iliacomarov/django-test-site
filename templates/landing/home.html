@@ -3,32 +3,51 @@
 
         {% block content %}
             <div class="section-top">
-                <img src="{% static 'img/slider0.jpg' %}" class="img-responsive">
+                <img src="{% static 'static_dev/img/slider0.jpg' %}" class="img-responsive">
             </div>
-            <div class="section">
+            <div class="section section1 iphones-container">
                 <div class="container">
                     <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="text-center">
+                                NEW ARRIVALS
+                            </h1>
+                        </div>
+                        {% for product_image in products_images_iphones %}
+                            {% include "landing/product_item.html" %}
+                        {% endfor %}
 
-                        {% for product in products %}
-                            <div class="col-lg-3">
-                                <div class="product-item">
-                                    <div>
-                                        <img src="/" class="img-responsive">
-                                    </div>
-                                    <h4>{{ product }}</h4>
-                                    <p>
-                                        {{ product.description|truncatechars_html:60 }}
-                                    </p>
-                                    <div>
-                                        {{ product.product_price }} USD
-                                    </div>
-                                    <div class="add-to-cart-btn">
-                                        <button class="btn btn-success">
-                                            Add to cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section shipping-section">
+                <p>Shipping</p>
+            </div>
+            <div class="section section2 phones-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="text-center">
+                                NEW ARRIVALS
+                            </h1>
+                        </div>
+                        {% for product_image in products_images_phones %}
+                            {% include "landing/product_item.html" %}
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="section section3 laptops-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="text-center">
+                                NEW ARRIVALS
+                            </h1>
+                        </div>
+                        {% for product_image in products_images_laptops %}
+                            {% include "landing/product_item.html" %}
                         {% endfor %}
 
                     </div>
